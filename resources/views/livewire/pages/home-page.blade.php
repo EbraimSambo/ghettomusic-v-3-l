@@ -1,14 +1,17 @@
 <div class="page-container">
 
     <section id="new-musics">
-      <h2 class="heading">Os mais baíxados</h2>
+      <h2 class="heading">Os mais baixados</h2>
        <x-app.music.music-container :musics="$tops" />
     </section>
 
+    @if (count($recomended)=== 0)
     <section id="new-musics">
       <h2 class="heading"> Recomendações para si</h2>
        <x-app.music.music-container :musics="$recomended" />
-    </section>
+    </section>        
+    @endif
+
 
     <section id="new-musics">
       <h2 class="heading"> Ultimos Lançamentos </h2>
